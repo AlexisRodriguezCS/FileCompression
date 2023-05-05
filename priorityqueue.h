@@ -17,17 +17,18 @@ template <typename T>
 class priorityqueue {
  private:
   struct NODE {
-    int priority;  // used to build BST
-    T value;       // stored data for the p-queue
-    bool dup;      // marked true when there are duplicate priorities
-    NODE* parent;  // links back to parent
-    NODE* link;    // links to linked list of NODES with duplicate priorities
-    NODE* left;    // links to left child
-    NODE* right;   // links to right child
+    int priority;   // used to build BST
+    T value;        // stored data for the p-queue
+    bool dup;       // marked true when there are duplicate priorities
+    NODE* parent;   // links back to parent
+    NODE* link;     // links to linked list of NODES with duplicate priorities
+    NODE* left;     // links to left child
+    NODE* right;    // links to right child
   };
-  NODE* root;  // pointer to root node of the BST
-  int size;    // # of elements in the pqueue
-  NODE* curr;  // pointer to next item in pqueue (see begin and next)
+
+  NODE* root;   // pointer to root node of the BST
+  int size;     // # of elements in the pqueue
+  NODE* curr;   // pointer to next item in pqueue (see begin and next)
 
   // Helper function to walk through the tree and add the priority
   // and value of each node to the output
@@ -43,6 +44,7 @@ class priorityqueue {
       _toString(node->right, output);
     }
   }
+
   // Helper function to walk through the linked list and add the priority
   // and value of each node to the output
   void _toStringLink(NODE* node, stringstream& output) {
@@ -147,7 +149,7 @@ class priorityqueue {
       } else {
         while (curr->priority == curr->parent->priority) {
           curr = curr->parent;
-          if (curr->parent == nullptr) {  // root
+          if (curr->parent == nullptr) {   // root
             break;
           }
         }
@@ -157,6 +159,7 @@ class priorityqueue {
       return _next_tree();
     }
   }
+
   // Helper function to go up the tree and find the next node
   bool _next_tree() {
     if (curr->right != nullptr) {
@@ -188,7 +191,7 @@ class priorityqueue {
         cur->right->parent = succ;
       }
       // Check Parent
-      if (cur == root) {  // Node is root
+      if (cur == root) {   // Node is root
         this->root = succ;
         succ->parent = nullptr;
       } else {
@@ -197,18 +200,18 @@ class priorityqueue {
       }
       delete cur;
     } else if ((cur->left == nullptr) &&
-               (cur->right == nullptr)) {  // Remove leaf
-      if (cur == root) {                   // Node is root
+               (cur->right == nullptr)) {   // Remove leaf
+      if (cur == root) {                    // Node is root
         this->root = nullptr;
       } else {
         cur->parent->left = nullptr;
       }
       delete cur;
-    } else {              // Remove node with only right child
-      if (cur == root) {  // Node is root
+    } else {               // Remove node with only right child
+      if (cur == root) {   // Node is root
         this->root = cur->right;
         cur->right->parent = nullptr;
-      } else {  // if (cur -> parent -> left == cur) {
+      } else {   // if (cur -> parent -> left == cur) {
         cur->parent->left = cur->right;
         cur->right->parent = cur->parent;
       }
@@ -316,14 +319,14 @@ class priorityqueue {
     // 1. Search for priority.
     // If duplicate exists, link nodes
     while (cur != nullptr) {
-      if (priority == cur->priority) {  // duplicate
+      if (priority == cur->priority) {   // duplicate
         found = true;
         break;
       }
-      if (priority < cur->priority) {  // go left
+      if (priority < cur->priority) {   // go left
         prev = cur;
         cur = cur->left;
-      } else {  // go right
+      } else {   // go right
         prev = cur;
         cur = cur->right;
       }
@@ -360,6 +363,7 @@ class priorityqueue {
     }
     size++;
   }
+
   //
   // dequeue:
   //
