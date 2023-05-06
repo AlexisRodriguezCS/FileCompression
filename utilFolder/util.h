@@ -1,12 +1,15 @@
 /*
 util.h
 Alexis Rodriguez, Daniela Nieto
-arodr247, 
+arodr247,
 CS 251
 Project 6 - File Compression
-Description: This program is a file/string compression algorithm that allows to compress and decompress files using the a Huffman algorithm. It implements binary trees and priority queues
+Description: This program is a file/string compression algorithm that allows to
+compress and decompress files using the a Huffman algorithm. It implements
+binary trees and priority queues
 */
 #pragma once
+
 #include "bitstream.h"
 #include "hashmap.h"
 #include "priorityqueue.h"
@@ -23,10 +26,10 @@ struct HuffmanNode {
 // Helper function to delete nodes in tree in a post-order traversal
 void _freeTree(HuffmanNode* node) {
   if (node == nullptr) {
-  	// Base case
+    // Base case
     return;
   } else {
-  	// frees the right
+    // frees the right
     _freeTree(node->one);
     // frees the left
     _freeTree(node->zero);
@@ -211,15 +214,15 @@ string decode(ifbitstream& input, HuffmanNode* encodingTree, ofstream& output) {
   int c = input.readBit();
   while (c != EOF) {
     if (c == 0) {
-    	// goes left
+      // goes left
       curr = curr->zero;
     } else {
-    	// goes right
+      // goes right
       curr = curr->one;
     }
     if (curr->character != NOT_A_CHAR) {
       if (curr->character == PSEUDO_EOF) {
-      	// at the end of the file
+        // at the end of the file
         break;
       }
       // update the string
@@ -254,7 +257,7 @@ string compress(string filename) {
   // Step 4
   ifstream input(filename);
   ofbitstream output(filename + ".huf");
-  output << frequencyMap;  // add the frequency map to the file
+  output << frequencyMap;   // add the frequency map to the file
   int size = 0;
   string codeStr = encode(input, encodingMap, output, size, true);
   freeTree(encodingTree);
