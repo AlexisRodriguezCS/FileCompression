@@ -17,6 +17,12 @@
 <a name="about"></a>
 ## About The Project
 
+This is a C++ program that performs file compression and decompression using the Hoffman Coding technique. The program utilizes a priority queue implemented with a custom binary search tree and a hashmap.h file. The nodes within the binary search tree are organized based on their priority, and nodes with the same priority are allowed and connected as a linked list.
+
+The program functions as a file/string compression algorithm and allows for the compression and decompression of files using the Huffman algorithm. It makes use of binary trees and priority queues to achieve its functionality.
+
+In summary, this C++ program provides an implementation of the Huffman Coding technique for file compression and decompression. It uses a custom priority queue implemented as a binary search tree and hashmap.h file, with nodes organized by priority and linked as necessary. This program is a useful tool for anyone looking to compress and decompress files or strings in their work or personal projects.
+
 Here's an online demo of the project hosted on [repl.it](https://replit.com/@Alexisrz/FileCompression) for you to try out.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
