@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/AlexisRodriguezCS/FileCompression/blob/main/Images/Files.jpg" alt="Grid" style="display:block;margin:auto;" height="500">
+  <img src="https://raw.githubusercontent.com/AlexisRodriguezCS/FileCompression/main/Images/Files.jpg" alt="Grid" style="display:block;margin:auto;" height="500">
 </p>
 <h1 align="center">File Compression</h1>
 
