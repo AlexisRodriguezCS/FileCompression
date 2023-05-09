@@ -1,15 +1,9 @@
-CXX = g++
-CXXFLAGS = -std=c++11 -g -O2 -fsanitize=undefined -fsanitize=leak -fsanitize=address
-
-all: build run
-
-build: slidingBlock
-
+build:
+	$(if $(filter $(OS),Windows_NT), if exist program.exe (del program.exe), rm -f program.exe)
+	g++ -g -std=c++11 -Wall main.cpp hashmap.cpp -o program.exe
+	
 run:
-	./slidingBlock
+	./program.exe
 
-slidingBlock: slidingBlock.cpp Grid.h Piece.h Movement.h 
-	$(CXX) $(CXXFLAGS) -o slidingBlock slidingBlock.cpp
-
-clean:
-	rm -f slidingBlock *.o
+valgrind:
+	valgrind --tool=memcheck --leak-check=yes ./program.exe
