@@ -137,7 +137,7 @@ When the "make run" command is executed, it displays the following output and aw
 | T. Text file viewer              | Displays the content of a text file. Requires the text file to be viewed.                                      |
 | Q. Quit                          | Exits the program.                                                                                             |
 
-> The following is the program output generated when executed with the input file "example.txt".
+The following is the program output generated when executed with the input file "example.txt".
 
 Command 1:
 
@@ -174,6 +174,19 @@ Command 3:
 `32:     ' ' --> 00`<br>
 
 Command 4:
+
+`Encoding...`<br>
+`Compressed file size: 34`<br>
+`1110001110000101110011`<br>
+
+Command 5:
+
+`Decoding...`<br>
+`ab ab cab`<br>
+
+Command 6:
+
+`Freeing encoding tree...`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
