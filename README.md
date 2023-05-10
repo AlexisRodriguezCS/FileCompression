@@ -28,6 +28,8 @@ One notable feature of this program is its use of a custom priority queue. By im
 
 Overall, this C++ program provides a powerful implementation of the Hoffman Coding technique for file compression and decompression. It makes use of a custom priority queue that's implemented as a binary search tree and hashmap.h file, allowing for efficient grouping of nodes with the same priority. The program is a valuable tool for anyone who needs to compress and decompress files or strings, providing an efficient and effective compression algorithm.
 
+> We were provided with main.cpp, hashmap.cpp, and bitsream.h, but we took charge of designing and implementing util.h and priorityqueue.h.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -120,19 +122,19 @@ When the "make run" command is executed, it displays the following output and aw
 
 <br>
 
-| Command                          | Description and Requirements                                                                                   |
-| -------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| 1. Build character frequency map | Generates a map of character frequencies in the data(File or String). Requires input selection (F for file, S for string).     |
-| 2. Build encoding tree           | Constructs an encoding tree based on the character frequency map.                                              |
-| 3. Build encoding map            | Creates an encoding map using the encoding tree.                                                               |
-| 4. Encode data                   | Encodes the data using the encoding map. Requires an existing encoding map.                                    |
-| 5. Decode data                   | Decodes the data using the encoding map. Requires an existing encoding map.                                    |
-| 6. Free tree memory              | Releases memory occupied by the encoding tree.                                                                 |
-| C. Compress file                 | Compresses a file using the encoding map. Requires an existing encoding map and the file to be compressed.     |
-| D. Decompress file               | Decompresses a file using the encoding map. Requires an existing encoding map and the file to be decompressed. |
-| B. Binary file viewer            | Displays the content of a binary file. Requires the binary file to be viewed.                                  |
-| T. Text file viewer              | Displays the content of a text file. Requires the text file to be viewed.                                      |
-| Q. Quit                          | Exits the program.                                                                                             |
+| Command                          | Description and Requirements                                                                                               |
+| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| 1. Build character frequency map | Generates a map of character frequencies in the data(File or String). Requires input selection (F for file, S for string). |
+| 2. Build encoding tree           | Constructs an encoding tree based on the character frequency map.                                                          |
+| 3. Build encoding map            | Creates an encoding map using the encoding tree.                                                                           |
+| 4. Encode data                   | Encodes the data using the encoding map. Requires an existing encoding map.                                                |
+| 5. Decode data                   | Decodes the data using the encoding map. Requires an existing encoding map.                                                |
+| 6. Free tree memory              | Releases memory occupied by the encoding tree.                                                                             |
+| C. Compress file                 | Compresses a file using the encoding map. Requires an existing encoding map and the file to be compressed.                 |
+| D. Decompress file               | Decompresses a file using the encoding map. Requires an existing encoding map and the file to be decompressed.             |
+| B. Binary file viewer            | Displays the content of a binary file. Requires the binary file to be viewed.                                              |
+| T. Text file viewer              | Displays the content of a text file. Requires the text file to be viewed.                                                  |
+| Q. Quit                          | Exits the program.                                                                                                         |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
