@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/AlexisRodriguezCS/FileCompression/main/Images/Files.jpg" alt="Grid" style="display:block;margin:auto;" height="500">
 </p>
-<h1 align="center" style="font-size: 48px;">File Compression</h1>
+<h1 align="center" style="font-size: 58px;">File Compression</h1>
 
 <!-- TABLE OF CONTENTS -->
 <p align="center">
