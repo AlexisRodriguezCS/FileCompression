@@ -83,13 +83,13 @@ $ make run
 
 `6.  Free tree memory`
 
-
+<br>
 
 `C.  Compress file`
 
 `D.  Decompress file`
 
-
+<br>
 
 `B.  Binary file viewer`
 
@@ -97,10 +97,12 @@ $ make run
 
 `Q.  Quit`
 
-
+<br>
 
 `Enter choice: `
+
 <br>
+
 Put Commands examples
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
