@@ -122,19 +122,20 @@ When the "make run" command is executed, it displays the following output and aw
 
 <br>
 
-| Command                          | Description and Requirements                                                                                               |
-| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| 1. Build character frequency map | Generates a map of character frequencies in the data(File or String). Requires input selection (F for file, S for string). |
-| 2. Build encoding tree           | Constructs an encoding tree based on the character frequency map.                                                          |
-| 3. Build encoding map            | Creates an encoding map using the encoding tree.                                                                           |
-| 4. Encode data                   | Encodes the data using the encoding map. Requires an existing encoding map.                                                |
-| 5. Decode data                   | Decodes the data using the encoding map. Requires an existing encoding map.                                                |
-| 6. Free tree memory              | Releases memory occupied by the encoding tree.                                                                             |
-| C. Compress file                 | Compresses a file using the encoding map. Requires an existing encoding map and the file to be compressed.                 |
-| D. Decompress file               | Decompresses a file using the encoding map. Requires an existing encoding map and the file to be decompressed.             |
-| B. Binary file viewer            | Displays the content of a binary file. Requires the binary file to be viewed.                                              |
-| T. Text file viewer              | Displays the content of a text file. Requires the text file to be viewed.                                                  |
-| Q. Quit                          | Exits the program.                                                                                                         |
+| Command                          | Description and Requirements                                                                                   |
+| -------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| 1. Build character frequency map | Generates a map of character frequencies in the data.                                                          |
+| 1a. [F]ile or [S]tring           | Please specify the input type by entering "F" for file or "S" for string.                                      |
+| 2. Build encoding tree           | Constructs an encoding tree based on the character frequency map.                                              |
+| 3. Build encoding map            | Creates an encoding map using the encoding tree.                                                               |
+| 4. Encode data                   | Encodes the data using the encoding map. Requires an existing encoding map.                                    |
+| 5. Decode data                   | Decodes the data using the encoding map. Requires an existing encoding map.                                    |
+| 6. Free tree memory              | Releases memory occupied by the encoding tree.                                                                 |
+| C. Compress file                 | Compresses a file using the encoding map. Requires an existing encoding map and the file to be compressed.     |
+| D. Decompress file               | Decompresses a file using the encoding map. Requires an existing encoding map and the file to be decompressed. |
+| B. Binary file viewer            | Displays the content of a binary file. Requires the binary file to be viewed.                                  |
+| T. Text file viewer              | Displays the content of a text file. Requires the text file to be viewed.                                      |
+| Q. Quit                          | Exits the program.                                                                                             |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
