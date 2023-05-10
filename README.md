@@ -69,7 +69,37 @@ $ make run
 <a name="usage"></a>
 ## Usage
 
-Put Screenshot of commands
+`Welcome to the file compression app!`
+
+`1.  Build character frequency map`
+
+`2.  Build encoding tree`
+
+`3.  Build encoding map`
+
+`4.  Encode data`
+
+`5.  Decode data`
+
+`6.  Free tree memory`
+
+
+
+`C.  Compress file`
+
+`D.  Decompress file`
+
+
+
+`B.  Binary file viewer`
+
+`T.  Text file viewer`
+
+`Q.  Quit`
+
+
+
+`Enter choice: `
 <br>
 Put Commands examples
 
