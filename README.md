@@ -28,7 +28,7 @@ One notable feature of this program is its use of a custom priority queue. By im
 
 Overall, this C++ program provides a powerful implementation of the Hoffman Coding technique for file compression and decompression. It makes use of a custom priority queue that's implemented as a binary search tree and hashmap.h file, allowing for efficient grouping of nodes with the same priority. The program is a valuable tool for anyone who needs to compress and decompress files or strings, providing an efficient and effective compression algorithm.
 
-> Despite being provided with main.cpp, hashmap.cpp, and bitsream.h, we undertook the responsibility of designing and implementing util.h and priorityqueue.h to meet the project's requirements.
+> My partner and I were provided with main.cpp, hashmap.cpp, and bitsream.h, however, we successfully designed and implemented util.h and priorityqueue.h to complement the existing code, demonstrating our ability to expand upon and enhance pre-existing software.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
