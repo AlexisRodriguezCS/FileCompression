@@ -137,9 +137,9 @@ When the "make run" command is executed, it displays the following output and aw
 | T. Text file viewer              | Displays the content of a text file. Requires the text file to be viewed.                                      |
 | Q. Quit                          | Exits the program.                                                                                             |
 
-## The following is the program output generated when executed with the input file "example.txt".
+> The following is the program output generated when executed with the input file "example.txt".
 
-### Command 1:
+Command 1:
 
 `Enter choice: 1`<br>
 `[F]ilename or [S]tring? F`<br>
@@ -152,7 +152,7 @@ When the "make run" command is executed, it displays the following output and aw
 `32:       ' ' --> 2`<br>
 `256:      EOF --> 1`<br>
 
-### Command 2:
+Command 2:
 
 `{N/A, count=10}`<br>
 `{N/A, count=4}`<br>
@@ -164,7 +164,7 @@ When the "make run" command is executed, it displays the following output and aw
 `{'b'(98), count=3}`<br>
 `{'a'(97), count=3}`<br>
 
-### Command 3:
+Command 3:
 
 `Building encoding map...`<br>
 `98:     'b' --> 10`<br>
@@ -173,7 +173,7 @@ When the "make run" command is executed, it displays the following output and aw
 `97:     'a' --> 11`<br>
 `32:     ' ' --> 00`<br>
 
-### Command 4:
+Command 4:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
