@@ -122,7 +122,7 @@ When the "make run" command is executed, it displays the following output and aw
 
 | Command                          | Description and Requirements                                                                                   |
 | -------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| 1. Build character frequency map | Generates a map of character frequencies in the data. Requires input selection (F for file, S for string).     |
+| 1. Build character frequency map | Generates a map of character frequencies in the data(File or String). Requires input selection (F for file, S for string).     |
 | 2. Build encoding tree           | Constructs an encoding tree based on the character frequency map.                                              |
 | 3. Build encoding map            | Creates an encoding map using the encoding tree.                                                               |
 | 4. Encode data                   | Encodes the data using the encoding map. Requires an existing encoding map.                                    |
