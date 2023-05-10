@@ -20,8 +20,6 @@
 
 ## About The Project
 
----
-
 This C++ program is designed to perform file compression and decompression using the Hoffman Coding technique. It employs a priority queue, which is implemented as a custom binary search tree and a hashmap. Nodes within the binary search tree are organized by priority, allowing for efficient compression and decompression of files. When nodes have the same priority, they are linked as a linked list.
 
 The program functions as a file/string compression algorithm, providing the ability to compress and decompress files using the Huffman algorithm. It utilizes binary trees to encode and decode the data, while the priority queue determines the order in which the data is processed. The program's use of binary trees and priority queues allows it to provide an efficient and effective compression algorithm.
@@ -37,8 +35,6 @@ Overall, this C++ program provides a powerful implementation of the Hoffman Codi
 <a name="getting-started"></a>
 
 ## Getting Started
-
----
 
 To set up a project locally, follow these simple steps.
 
@@ -81,8 +77,6 @@ Here's an online demo of the project hosted on [repl.it](https://replit.com/@Ale
 <a name="usage"></a>
 
 ## Usage
-
----
 
 When the "make run" command is executed, it displays the following output and awaits user input.
 
@@ -147,8 +141,6 @@ When the "make run" command is executed, it displays the following output and aw
 <a name="contact"></a>
 
 ## Contact
-
----
 
 Alexis Rodriguez - [LinkedIn](https://www.linkedin.com/in/alexisrodriguezcs/) - alexisrodriguezdev@gmail.com
 
