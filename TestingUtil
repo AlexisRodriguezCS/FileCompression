@@ -1,0 +1,100 @@
+#include <gtest/gtest.h>
+#include <fstream>
+#include <unordered_map>
+#include <string>
+#include <sstream>
+#include <cassert>
+
+#include "util.h"
+
+using namespace std;
+
+// Test fixture for the Util functions
+class UtilTest : public ::testing::Test {
+protected:
+    void SetUp() override {
+        // Create a test file
+        ofstream testFile("example.txt");
+        if (testFile.is_open()) {
+            testFile << "ab ab cab";
+            testFile.close();
+        }
+    }
+
+    void TearDown() override {
+        // Remove the test file
+        remove("example.txt");
+    }
+};
+
+// Tests for the Util functions
+TEST_F(UtilTest, BuildFrequencyMap) {
+    hashmapF frequencyMap;
+    buildFrequencyMap("example.txt", true, frequencyMap);
+
+    // Verify the frequency map
+    ASSERT_EQ(frequencyMap.get('a'), 2);
+    ASSERT_EQ(frequencyMap.get('b'), 3);
+    ASSERT_EQ(frequencyMap.get('c'), 1);
+    ASSERT_EQ(frequencyMap.get(PSEUDO_EOF), 1);
+}
+
+TEST_F(UtilTest, BuildEncodingTree) {
+    hashmapF frequencyMap;
+    buildFrequencyMap("example.txt", true, frequencyMap);
+
+    HuffmanNode* encodingTree = buildEncodingTree(frequencyMap);
+
+    // Verify the encoding tree
+    ASSERT_NE(encodingTree, nullptr);
+
+    // Clean up memory
+    freeTree(encodingTree);
+}
+
+TEST_F(UtilTest, BuildEncodingMap) {
+    hashmapF frequencyMap;
+    buildFrequencyMap("example.txt", true, frequencyMap);
+
+    HuffmanNode* encodingTree = buildEncodingTree(frequencyMap);
+    hashmapE encodingMap = buildEncodingMap(encodingTree);
+
+    // Verify the encoding map
+    ASSERT_EQ(encodingMap['a'], "01");
+    ASSERT_EQ(encodingMap['b'], "00");
+    ASSERT_EQ(encodingMap['c'], "1");
+    ASSERT_EQ(encodingMap[PSEUDO_EOF], "10");
+
+    // Clean up memory
+    freeTree(encodingTree);
+}
+
+TEST_F(UtilTest, CompressAndDecompress) {
+    string compressedFile = compress("example.txt");
+
+    ifstream inputFile("example.txt");
+    ifstream compressedInput(compressedFile + ".huf");
+
+    // Read the original file and compressed file contents
+    stringstream inputBuffer;
+    stringstream compressedBuffer;
+    inputBuffer << inputFile.rdbuf();
+    compressedBuffer << compressedInput.rdbuf();
+
+    inputFile.close();
+    compressedInput.close();
+
+    // Verify that the compressed file is not empty
+    ASSERT_FALSE(compressedBuffer.str().empty());
+
+    // Perform decompression
+    string decompressedFile = decompress(compressedFile + ".huf");
+
+    // Verify that the decompressed file matches the original file
+    ASSERT_EQ(inputBuffer.str(), decompressedFile);
+}
+
+int main(int argc, char** argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}
